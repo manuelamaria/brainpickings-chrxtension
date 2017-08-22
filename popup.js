@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    var container = document.getElementById('container');
+    var extensionElements = document.getElementsByClassName('extension');
+    var container = extensionElements[0];
     var message = JSON.parse(request);
 
     if (message.type === 'error') {
@@ -20,9 +21,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
       }
     } else {
       var links = message.links;
-      var list = "<ul>";
+      var list = "<ul class='article-list'>";
       links.map(function(item) {
-        list = `${list}<li><a href='${item.location}'>${item.text}</a></li>`;
+        list = `${list}<li class='article-list__item'><a class='article-list__item__link' href='${item.location}'>${item.text}</a></li>`;
       });
       list = `${list}</ul>`;      
 

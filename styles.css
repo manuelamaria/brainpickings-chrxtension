@@ -1,0 +1,32 @@
+.extension {
+    background: #ecf0f1;
+    white-space: pre;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.article-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-list__item {
+    height: 40px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    box-shadow: 0 -2px 0 0 white, 0 -3px 0 0 #e6e6e6;
+    padding: 12px 10px 0 10px;
+}
+
+.article-list__item:hover {
+    background: rgba(0,0,0, 0.05);
+}
+
+.article-list__item__link {
+    text-decoration: none;
+    color: #666;
+}

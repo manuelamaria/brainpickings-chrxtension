@@ -1,0 +1,18 @@
+{
+    "manifest_version" : 2,
+
+    "name": "Brain Pickings Extension",
+    "description": "Extract linked articles",
+    "version": "1.0",
+
+    "browser_action": {
+        "default_icon": "bp.png", 
+        "default_popup": "popup.html"
+    },
+
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "https://www.brainpickings.org/*"
+    ]
+}
